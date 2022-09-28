@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../assets/textfiles/textfile.dart';
+import 'package:valorant_rehber/pages/page_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,11 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: TitleClass.title,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Text('data'),
+      home: const HomePage(),
     );
   }
 }
