@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:valorant_rehber/pages/page_home.dart';
+import 'package:valorant_rehber/pages/page_test.dart';
 import '../assets/textfiles/textfile.dart';
 
 Future<void> main() async {
