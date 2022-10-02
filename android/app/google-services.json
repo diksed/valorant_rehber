@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "350436487444",
+    "project_id": "valorant-rehber-cca18",
+    "storage_bucket": "valorant-rehber-cca18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350436487444:android:4f86642be402d8f16f5201",
+        "android_client_info": {
+          "package_name": "com.example.valorant_rehber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350436487444-6lh2aacn5ltj130bortje2sddvj76fkh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8NvIWdGeFvX9sDFuEFsOSt0Pb9QlBC30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350436487444-6lh2aacn5ltj130bortje2sddvj76fkh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
