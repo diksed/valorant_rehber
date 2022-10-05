@@ -51,3 +51,27 @@ class ImageAgentClass {
   static const chamber = "agents/chamber.jpg";
   static const fade = "agents/fade.jpg";
 }
+
+class AgentsList {
+  var agents = [
+    'astra',
+    'breach',
+    'brimstone',
+    'cypher',
+    'jett',
+    'killjoy',
+    'omen',
+    'phoenix',
+    'raze',
+    'reyna',
+    'sage',
+    'skye',
+    'sova',
+    'viper',
+    'yoru',
+    'kayo',
+    'neon',
+    'chamber',
+    'fade'
+  ];
+}

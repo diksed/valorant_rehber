@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 
 class Storage {
@@ -10,7 +9,8 @@ class Storage {
   }
 
   Future<String> downloadURL(String imageName) async {
-    String downloadURL = await storage.ref().child(imageName).getDownloadURL();
+    String downloadURL =
+        await storage.ref().child('agents/$imageName.jpg').getDownloadURL();
     return downloadURL;
   }
 
