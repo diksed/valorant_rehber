@@ -1,5 +1,9 @@
-class TitleClass {
+import 'package:flutter/animation.dart';
+import 'package:flutter/material.dart';
+
+class StringClass {
   static const title = "VALORANT Rehber";
+  static Color valRenk = const Color(0xFFff4654);
 }
 
 class ImageClass {
@@ -73,5 +77,26 @@ class AgentsList {
     'neon',
     'chamber',
     'fade'
+  ];
+  var agentsId = [
+    'id_astra',
+    'id_breach',
+    'id_brimstone',
+    'id_cypher',
+    'id_jett',
+    'id_killjoy',
+    'id_omen',
+    'id_phoenix',
+    'id_raze',
+    'id_reyna',
+    'id_sage',
+    'id_skye',
+    'id_sova',
+    'id_viper',
+    'id_yoru',
+    'id_kayo',
+    'id_neon',
+    'id_chamber',
+    'id_fade'
   ];
 }

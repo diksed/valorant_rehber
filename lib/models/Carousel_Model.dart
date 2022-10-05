@@ -1,45 +1,64 @@
+// ignore_for_file: file_names
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:valorant_rehber/assets/textfiles/textfile.dart';
-import 'package:valorant_rehber/pages/page_lineup.dart';
-import 'package:valorant_rehber/sources/Storage.dart';
+import 'package:valorant_rehber/sources/storage.dart';
 
+import '../sources/firestore.dart';
+
+// ignore: must_be_immutable
 class CarouselDemo extends StatelessWidget {
   CarouselController buttonCarouselController = CarouselController();
   final Storage storage = Storage();
-
+  late int initialPage = 0;
   CarouselDemo({super.key});
 
   @override
-  Widget build(BuildContext context) => Column(children: <Widget>[
+  Widget build(BuildContext context) => Column(children: [
         CarouselSlider(
           items: AgentsList().agents.map((i) {
             return Builder(
               builder: (BuildContext context) {
-                return GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LineupPage()));
-                  },
-                  child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                      decoration: const BoxDecoration(color: Color(0xFFff4654)),
-                      child: agentFutureBuilder(i.toString())),
-                );
+                return Container(
+                    width: MediaQuery.of(context).size.width,
+                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                    decoration: BoxDecoration(color: StringClass.valRenk),
+                    child: agentFutureBuilder(i.toString()));
               },
             );
           }).toList(),
           carouselController: buttonCarouselController,
           options: CarouselOptions(
+            onPageChanged: (index, reason) {
+              initialPage = index;
+
+              print(initialPage);
+              print(AgentsList().agentsId[initialPage]);
+            },
             viewportFraction: 0.3,
-            aspectRatio: 5.0,
-            initialPage: 0,
+            aspectRatio: 4.0,
+            initialPage: initialPage,
+            enlargeCenterPage: true,
+            enlargeStrategy: CenterPageEnlargeStrategy.height,
           ),
         ),
       ]);
+
+  agentDesc() {
+    return Row(
+      children: [
+        GetAgent(AgentsList().agentsId[initialPage], 'img'),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            GetAgent(AgentsList().agentsId[initialPage], 'rol'),
+            GetAgent(AgentsList().agentsId[initialPage], 'name'),
+          ],
+        ),
+      ],
+    );
+  }
 
   FutureBuilder<String> agentFutureBuilder(String path) {
     return FutureBuilder(

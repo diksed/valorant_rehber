@@ -11,9 +11,7 @@ class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Text('Map Sayfası'),
-      ),
+      body: Text('data'),
     );
   }
 }

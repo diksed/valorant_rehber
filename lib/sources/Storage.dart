@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 
 class Storage {
